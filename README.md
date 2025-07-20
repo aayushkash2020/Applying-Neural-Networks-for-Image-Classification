@@ -1,4 +1,4 @@
-# Image Classification with Multilayer Perceptrons and Convolutional Neural Networks
+# Applying Neural Networks for Image Classification
 
 ## Overview
 
