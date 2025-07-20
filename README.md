@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project applies neural networks to the task of image classification using the CIFAR-10 dataset. The focus is on implementing, training, and evaluating custom deep learning models—including fully connected and convolutional architectures—in PyTorch. The work combines practical software engineering with machine learning fundamentals, emphasizing model performance, experimentation, and reproducibility.
+This project applies neural networks to the task of image classification using the CIFAR-10 dataset. The focus is on implementing, training, and evaluating custom deep learning models, including fully connected and convolutional architectures, in PyTorch. The work combines practical software engineering with machine learning fundamentals, emphasizing model performance, experimentation, and reproducibility.
 
 ---
 
