@@ -1,49 +1,63 @@
 # Applying Neural Networks for Image Classification
-
 ## Overview
 
-This project applies neural networks to the task of image classification using the CIFAR-10 dataset. The focus is on implementing, training, and evaluating custom deep learning models, including fully connected and convolutional architectures, in PyTorch. The work combines practical software engineering with machine learning fundamentals, emphasizing model performance, experimentation, and reproducibility.
+This project explores a broad range of techniques for image classification and object recognition using neural networks. It progresses from basic image representations and MLP training to convolutional neural networks, transfer learning with pretrained models, and object detection using YOLO. The project also includes interpretability analyses and error diagnostics.
 
 ---
 
-## Dataset
+## Tasks Covered
 
-- **CIFAR-10**: A well-known benchmark dataset containing 60,000 32x32 color images in 10 classes, with 6,000 images per class. The dataset is split into 50,000 training images and 10,000 test images.
+### 1. Representation
 
----
+- Explored fundamental representations of grayscale and RGB images.
+- Visualized image data as pixel arrays and histograms.
+- Converted pixel values to flattened vectors to enable basic classification with linear models.
 
-## Key Learning Objectives
+### 2. MLP (Multilayer Perceptron)
 
-- Build and train multilayer perceptron (MLP) models for image classification.
-- Design and implement convolutional neural networks (CNNs) from scratch.
-- Use PyTorch to define model architectures, data loaders, and training loops.
-- Monitor learning dynamics through training and validation accuracy.
-- Evaluate model performance using classification metrics and confusion matrices.
-- Conduct experiments to compare architecture variants (e.g., MLP vs. CNN).
-- Visualize learned filters and predictions to understand model behavior.
-- Investigate the effects of hyperparameters such as learning rate and architecture depth.
-- Apply best practices in neural network training, such as batching and regularization.
-- Reflect on how deep learning models extract features from raw image data.
+- Implemented a simple fully connected neural network in PyTorch.
+- Trained on the FashionMNIST dataset to classify images of clothing.
+- Applied ReLU activations and trained with cross-entropy loss using the Adam optimizer.
+- Visualized training/validation accuracy and loss using TensorBoard.
+
+### 3. Recognition (Convolutional Neural Networks)
+
+- Developed a CNN from scratch for classifying FashionMNIST images.
+- Added convolutional layers, max pooling, and dropout for regularization.
+- Compared performance against the MLP and showed improved generalization and test accuracy.
+- Analyzed the effect of different kernel sizes and layer configurations.
+
+### 4. Transfer (Transfer Learning with ResNet)
+
+- Fine-tuned a pretrained ResNet-18 model on a custom mini-dataset of CIFAR-10 classes.
+- Froze base layers and updated only the classifier head to adapt to the new task.
+- Used data augmentation (random crops, flips, normalization) to reduce overfitting.
+- Achieved high accuracy on new categories using very few training examples.
+
+### 5. Detection (YOLO and Grad-CAM)
+
+- Applied a pretrained YOLOv5 model for object detection on custom and sample images.
+- Drew bounding boxes around detected objects with confidence scores.
+- Evaluated detection performance across multiple categories.
+- Used Grad-CAM to visualize which parts of the image contributed most to classification decisions, enhancing model interpretability.
 
 ---
 
 ## Results Highlights
 
-- Achieved significantly improved classification accuracy using CNNs over MLPs, illustrating the power of local receptive fields and weight sharing in image tasks.
-- Demonstrated effective use of modular PyTorch components to train deep models.
-- Visualized model predictions and misclassifications to better understand failure cases.
-- Evaluated confusion matrices across architectures to highlight class-specific performance.
-- Compared performance across models to understand the tradeoffs between depth, parameter count, and generalization.
-- Documented training stability and convergence behavior under different learning rates and optimizers.
+- CNNs significantly outperformed MLPs on image recognition, demonstrating the power of spatial feature extraction.
+- Transfer learning with ResNet-18 achieved strong results on new categories using minimal data.
+- YOLOv5 detected multiple object categories in real-world scenes with high precision and recall.
+- Grad-CAM revealed meaningful attention maps aligned with human intuition, validating model interpretability.
 
 ---
 
 ## Reflection
 
-This project strengthened my understanding of neural networks for computer vision, from the fundamentals of matrix operations in fully connected networks to the architectural intuition behind CNNs. Through iterative experimentation and implementation in PyTorch, I gained insight into the role of architectural choices and training strategies in determining performance. The project also highlighted how deep models progressively learn useful visual features, even from raw pixel data.
+This project built my intuition for the strengths and weaknesses of different neural network architectures for vision tasks. I gained hands-on experience with end-to-end training in PyTorch, from defining models to tracking learning curves. Exploring transfer learning and object detection also helped me understand how state-of-the-art models can generalize to new domains. Finally, interpretability tools like Grad-CAM offered valuable insights into model behavior, reinforcing the importance of transparency in deep learning systems.
 
 ---
 
 ## Contact
 
-For questions or collaboration, reach out to aayushkashyap2018@gmail.com. Thank you!
+For questions or collaboration, feel free to contact me at aayushkashyap2018@gmail.com.
